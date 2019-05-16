@@ -4,9 +4,11 @@ class Student
   attr_reader :id
   
   def initialize
-    
+    @name = ""
+    @grade = ""
   end
-  self.create_table
+  
+  def self.create_table
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS students (
         id INTEGER PRIMARY KEY,
